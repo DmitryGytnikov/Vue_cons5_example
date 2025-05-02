@@ -1,0 +1,8 @@
+{
+	"welcome": "Welcome",
+	"hello": "hello",
+	"form": {
+		"name": "Name",
+		"email": "Email"
+	}
+}

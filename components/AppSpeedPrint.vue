@@ -1,4 +1,6 @@
 <script setup>
+const { locales, setLocale } = useI18n()
+
 const fact = ref("")
 const typedText = ref("")
 
@@ -24,4 +26,18 @@ const fetchData = () => {
 	<h1>Рандомная цитата</h1>
 	<button @click="fetchData">Click Me!</button>
 	<p>{{ fact }}</p>
+
+	<div>
+		<button
+			v-for="locale in locales"
+			@click="setLocale(locale.code)"
+			:key="locale.name"
+		>
+			{{ locale.name }}
+		</button>
+		<h1>{{ $t("welcome") }}</h1>
+		<div>{{ $t("hello") }}</div>
+		<div>{{ $t("form.name") }}</div>
+		<div>{{ $t("form.email") }}</div>
+	</div>
 </template>

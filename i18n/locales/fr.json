@@ -1,0 +1,8 @@
+{
+	"welcome": "Bienvenu",
+	"hello": "bonjour",
+	"form": {
+		"name": "Nom",
+		"email": "Email"
+	}
+}
